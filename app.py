@@ -15,7 +15,7 @@ encoder = Model(autoencoder.input, autoencoder.layers[3].output)
 UPLOAD_FOLDER = 'templates'
 
 app = Flask(__name__)
-run_with_ngrok(app)
+
 
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
@@ -540,5 +540,7 @@ def upload():
 
             else:             
                  return "this file type is not allowed, please upload only PDF"
-app.run()            
+
+if __name__ == '__main__':
+    app.run(debug=True)           
       

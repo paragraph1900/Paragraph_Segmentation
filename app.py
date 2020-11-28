@@ -6,9 +6,9 @@ __author__ = 'ibininja'
 
 
 
-model = pickle.load(open('kmeans22.pkl','rb'))
+model = pickle.load(open('Kmeans.pkl','rb'))
 
-autoencoder= tf.keras.models.load_model('autoencoder_large.hdf5')  #loading autoencoder
+autoencoder= tf.keras.models.load_model('Autoencoder.hdf5')  #loading autoencoder
 
 encoder = Model(autoencoder.input, autoencoder.layers[3].output)   
 
